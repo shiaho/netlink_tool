@@ -20,6 +20,7 @@ type Attr struct {
 }
 
 func GetTaskStats(nlsk *nlgo.NlSock, p int) (t *Taskstats) {
+	nlsk.Flags |= nlgo.NL_NO_AUTO_ACK
 	const familyID  =  22
 	m := &MSG{
 		Len:  8,
