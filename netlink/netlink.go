@@ -19,8 +19,6 @@ type Attr struct {
 	Data []byte
 }
 
-
-
 func GetTaskStats(nlsk *nlgo.NlSock, p int) (t *Taskstats) {
 	const familyID  =  22
 	m := &MSG{
