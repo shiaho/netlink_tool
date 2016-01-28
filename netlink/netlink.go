@@ -86,9 +86,9 @@ func GetTaskStats(nlsk *nlgo.NlSock, p int) (t *Taskstats) {
 			}
 		}
 	}()
-	if err != nil {
-		fmt.Println(err, err.Error())
-	}
+//	if err != nil {
+//		fmt.Println(err, err.Error())
+//	}
 	return
 }
 
