@@ -41,7 +41,7 @@ func GetTaskStats(nlsk *nlgo.NlSock, p int) (t *Taskstats) {
 	hdr = append(hdr, req...)
 	nlgo.NlSendSimple(nlsk, familyID, 1, hdr[:])
 
-	err := func() error {
+	func() error {
 		for {
 			buf := make([]byte, 16384)
 			if nn, _, err := syscall.Recvfrom(nlsk.Fd, buf, 0); err != nil {
